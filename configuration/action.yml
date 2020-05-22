@@ -1,0 +1,21 @@
+name: Build customize libraries
+
+description: Build customize libraries
+
+inputs:
+  base:
+    description: Base url of api endpoint.
+    required: true
+  directory:
+    description: Directory of configurations.
+    default: dist
+  tag:
+    description: Package tag that should remove.
+    default: alpha
+  token:
+    description: Token for api access.
+    required: true
+
+runs:
+  using: node12
+  main: dist/index.js
